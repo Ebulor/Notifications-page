@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+:root {
+  --Red: hsl(1, 90%, 64%);
+  --Blue: hsl(219, 85%, 26%);
+  --White: hsl(0, 0%, 100%);
+  --Verylightgrayishblue: hsl(210, 60%, 98%);
+  --Lightgrayishblue-1: hsl(211, 68%, 94%);
+  --Lightgrayishblue-2: hsl(205, 33%, 90%);
+  --Grayishblue: hsl(219, 14%, 63%);
+  --Darkgrayishblue: hsl(219, 12%, 42%);
+  --Verydarkblue: hsl(224, 21%, 14%);
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Verylightgrayishblue);
+  min-height: 100vh;
+}
+main {
+  padding: 20px 15px;
+  background-color: white;
+  border-radius: 10px;
+}
+.heading {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.heading h1 {
+  font-size: 1.3em;
+}
+.heading h1 span {
+  color: white;
+  background-color: var(--Blue);
+  font-size: 0.75em;
+  padding: 5px 12px;
+  margin-left: 8px;
+  border-radius: 8px;
+}
+.heading p {
+  cursor: pointer;
+  color: var(--Darkgrayishblue);
+}
+.heading p:hover {
+  color: var(--Blue);
+}
+.container {
+  margin: 30px 0;
+}
+.notification {
+  display: flex;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+.unread {
+  background-color: var(--Verylightgrayishblue);
+}
+.profile-img,
+.chess-img {
+  width: 13%;
+  max-width: 50px;
+}
+.profile-img img,
+.chess-img img {
+  width: 100%;
+}
+.details {
+  width: 100%;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.details p {
+  font-size: 14px;
+  cursor: pointer;
+}
+.message p:hover {
+  color: var(--Blue);
+}
+.notification .dot {
+  display: none;
+}
+.unread .dot {
+  display: inline;
+  position: relative;
+}
+.dot:after {
+  content: "";
+  position: absolute;
+  margin-top: 5px;
+  height: 8px;
+  width: 8px;
+  background-color: var(--Red);
+  border-radius: 50%;
+}
+.user {
+  font-weight: 800;
+}
+.user span {
+  color: var(--Darkgrayishblue);
+  margin-left: 5px;
+}
+.user span:first-child {
+  font-weight: 500;
+}
+.user-post:hover {
+  color: var(--Blue);
+}
+.user .chess {
+  color: var(--Blue);
+}
+.time {
+  color: var(--Grayishblue);
+  margin-top: 5px;
+}
+.user-msg {
+  cursor: pointer;
+  color: var(--Darkgrayishblue);
+  font-size: 14px;
+  padding: 15px 10px;
+  margin: 10px 0;
+  border: 1px solid var(--Grayishblue);
+  border-radius: 5px;
+}
+.user-msg:hover {
+  background-color: var(--Lightgrayishblue-1);
+  border: 1px solid var(--Lightgrayishblue-1);
+}
+@media (min-width: 600px) {
+  main {
+    width: 700px;
+    padding: 20px 25px;
+  }
+  .notification {
+    padding: 15px;
+  }
+  .details p,
+  .user-msg {
+    font-size: 16px;
+  }
+}
